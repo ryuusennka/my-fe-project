@@ -1,7 +1,7 @@
 {
   "name": "my-fe-project",
   "version": "1.0.0",
-  "description": "<!--  * @Author        : ryuusennka  * @Date          : 2022-01-02 16:39:39  * @LastEditors   : ryuusennka  * @LastEditTime  : 2022-01-02 16:45:06  * @FilePath      : /my-fe-project/readme.md  * @Description   : -->",
+  "description": "前端实用技巧",
   "main": "index.js",
   "scripts": {
     "start": "http-server ./",
