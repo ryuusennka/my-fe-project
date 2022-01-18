@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 主题颜色切换</title>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>主题<span class="primary-color">切换</span></h1>
+    <p>
+      Asperiores quibusdam architecto modi debitis dolorem laboriosam dolore. Molestiae odio id alias voluptate
+      possimus. Dolorum quam rerum itaque ratione deserunt rerum perspiciatis.
+    </p>
+    <p class="primary-color">
+      Beatae aliquid et et fugiat facilis quas rerum magni sapiente. Vel ut harum aliquid voluptatum pariatur amet et.
+      Officiis officia voluptatem. Dignissimos commodi dolorum quia qui dignissimos dolorum est et voluptas. Sit rerum
+      fugit omnis.
+    </p>
+    <h2>字体大小设置</h2>
+    <div class="select-size">
+      <div class="show xs" onclick="selectSize('xs')">Aa</div>
+      <div class="show sm" onclick="selectSize('sm')">Aa</div>
+      <div class="show md" onclick="selectSize('md')">Aa</div>
+      <div class="show lg" onclick="selectSize('lg')">Aa</div>
+      <div class="show xl" onclick="selectSize('xl')">Aa</div>
+    </div>
+
+    <h2 class="primary-color">颜色选择</h2>
+    <div class="select-theme-color">
+      <div class="item">
+        <div class="show blue" onclick="selectColor('blue')"></div>
+        blue
+      </div>
+      <div class="item">
+        <div class="show green" onclick="selectColor('green')"></div>
+        green
+      </div>
+      <div class="item">
+        <div class="show red" onclick="selectColor('red')"></div>
+        red
+      </div>
+      <div class="item">
+        <div class="show yellow" onclick="selectColor('yellow')"></div>
+        yellow
+      </div>
+      <div class="item">
+        <div class="show orange" onclick="selectColor('orange')"></div>
+        orange
+      </div>
+      <div class="item">
+        <div class="show purple" onclick="selectColor('purple')"></div>
+        purple
+      </div>
+    </div>
+    <h2 class="primary-color">主题选择</h2>
+    <section class="select-theme-mode">
+      <div class="item">
+        <div class="show light" onclick="selectMode('light')"></div>
+        <div>明亮</div>
+      </div>
+      <div class="item">
+        <div class="show dim" onclick="selectMode('dim')"></div>
+        <div>昏暗</div>
+      </div>
+      <div class="item">
+        <div class="show dark" onclick="selectMode('dark')"></div>
+        <div>黑暗</div>
+      </div>
+    </section>
+    <script src="../node_modules/js-cookie/dist/js.cookie.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

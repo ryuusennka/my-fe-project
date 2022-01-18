@@ -1,0 +1,180 @@
+:root {
+  --primary-color: #0d33ff;
+  // 默认主题(亮色)
+  --color: #000;
+  --background: #fff;
+  // 亮色主题
+  --light-color: #000;
+  --light-background: #fff;
+  // 昏暗主题
+  --dim-color: #333;
+  --dim-background: #d9d9d9;
+  // 暗色主题
+  --dark-color: #fff;
+  --dark-background: #000;
+  // 强调色
+  --blue: #0d33ff;
+  --green: green;
+  --red: red;
+  --yellow: #ffd700;
+  --orange: orange;
+  --purple: purple;
+  // 字体大小
+  --size-xs: 0.8rem;
+  --size-sm: 0.9rem;
+  --size-md: 1rem;
+  --size-lg: 1.1rem;
+  --size-xl: 1.2rem;
+}
+
+// 强调色
+[data-theme-color='blue'] {
+  --primary-color: var(--blue);
+}
+[data-theme-color='green'] {
+  --primary-color: var(--green);
+}
+[data-theme-color='red'] {
+  --primary-color: var(--red);
+}
+[data-theme-color='yellow'] {
+  --primary-color: var(--yellow);
+}
+[data-theme-color='orange'] {
+  --primary-color: var(--orange);
+}
+[data-theme-color='purple'] {
+  --primary-color: var(--purple);
+}
+// 主题切换
+[data-theme-mode='light'] {
+  color: var(--light-color);
+  background: var(--light-background);
+}
+[data-theme-mode='dim'] {
+  color: var(--dim-color);
+  background: var(--dim-background);
+}
+[data-theme-mode='dark'] {
+  color: var(--dark-color);
+  background: var(--dark-background);
+}
+// 字体大小切换
+[data-theme-size='xs'] {
+  font-size: var(--size-xs);
+}
+[data-theme-size='sm'] {
+  font-size: var(--size-sm);
+}
+[data-theme-size='md'] {
+  font-size: var(--size-md);
+}
+[data-theme-size='lg'] {
+  font-size: var(--size-lg);
+}
+[data-theme-size='xl'] {
+  font-size: var(--size-xl);
+}
+.primary-color {
+  color: var(--primary-color);
+}
+
+.select-theme-color {
+  display: flex;
+  justify-content: center;
+  .item {
+    margin-right: 1em;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .show {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    &.blue {
+      background: var(--blue);
+    }
+    &.green {
+      background: var(--green);
+    }
+    &.red {
+      background: var(--red);
+    }
+    &.yellow {
+      background: var(--yellow);
+    }
+    &.orange {
+      background: var(--orange);
+    }
+    &.purple {
+      background: var(--purple);
+    }
+  }
+}
+
+.select-theme-mode {
+  display: flex;
+  justify-content: center;
+  .item {
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .show {
+    width: 40px;
+    height: 30px;
+    background: #000;
+    outline: 1px solid blue;
+    cursor: pointer;
+    margin-right: 0.5em;
+    &.light {
+      background-color: var(--light-background);
+    }
+    &.dim {
+      background-color: var(--dim-background);
+    }
+    &.dark {
+      background-color: var(--dark-background);
+    }
+  }
+}
+
+.select-size {
+  display: flex;
+  justify-content: center;
+  .show {
+    color: var(--primary-color);
+    margin-right: 1em;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    &:last-child {
+      margin-right: auto;
+    }
+    &.xs {
+      font-size: var(--size-xs);
+    }
+    &.sm {
+      font-size: var(--size-sm);
+    }
+    &.md {
+      font-size: var(--size-md);
+    }
+    &.lg {
+      font-size: var(--size-lg);
+    }
+    &.xl {
+      font-size: var(--size-xl);
+    }
+  }
+}

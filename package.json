@@ -1,0 +1,22 @@
+{
+  "name": "my-fe-project",
+  "version": "1.0.0",
+  "description": "<!--  * @Author        : ryuusennka  * @Date          : 2022-01-02 16:39:39  * @LastEditors   : ryuusennka  * @LastEditTime  : 2022-01-02 16:45:06  * @FilePath      : /my-fe-project/readme.md  * @Description   : -->",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./",
+    "prestart": "npm run build",
+    "build": "node generateIndex.js",
+    "sass:watch": "sass --watch -s expanded --no-source-map ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boxicons": "^2.1.1",
+    "http-server": "^14.1.0",
+    "js-cookie": "^3.0.1",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.47.0"
+  }
+}
