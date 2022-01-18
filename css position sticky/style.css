@@ -1,0 +1,13 @@
+.indexpage .main-nav { display: -webkit-box; display: -ms-flexbox; display: flex; background: #333; color: #77fa80; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; position: -webkit-sticky; position: sticky; top: 0; }
+
+.indexpage .main-nav .item { line-height: 2rem; padding: 0.4em; }
+
+.indexpage .content { margin-top: 30px; font-size: 4rem; }
+
+.indexpage .header-large img { display: block; width: 100%; }
+
+.indexpage a { color: #fff; }
+
+.listpage .category { background: #333; color: #77fa80; line-height: 44px; padding: 0 1rem; position: -webkit-sticky; position: sticky; top: 0; }
+
+.listpage ul li { font-size: 5rem; }

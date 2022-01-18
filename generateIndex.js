@@ -2,7 +2,7 @@
  * @Author        : ryuusennka
  * @Date          : 2022-01-18 16:03:20
  * @LastEditors   : ryuusennka
- * @LastEditTime  : 2022-01-18 16:11:50
+ * @LastEditTime  : 2022-01-18 18:10:10
  * @FilePath      : /my-fe-project/generateIndex.js
  * @Description   :
  */
@@ -13,6 +13,7 @@ const path = require('path');
 
 const config = {
   'Multiple Themes': '主题切换',
+  'css position sticky': 'css position sticky 粘性位置',
 };
 const generateIndex = config => {
   const paths = [];

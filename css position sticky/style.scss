@@ -1,0 +1,46 @@
+.indexpage {
+  .main-nav {
+    display: flex;
+    background: #333;
+    color: #77fa80;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    .item {
+      line-height: 2rem;
+      padding: 0.4em;
+    }
+  }
+
+  .content {
+    margin-top: 30px;
+    font-size: 4rem;
+  }
+
+  .header-large {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+.listpage {
+  .category {
+    background: #333;
+    color: #77fa80;
+    line-height: 44px;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+  }
+  ul {
+    li {
+      font-size: 5rem;
+    }
+  }
+}
