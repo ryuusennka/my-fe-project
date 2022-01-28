@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .d1 {
+        display: flex;
+        justify-content: center;
+      }
+      .l {
+        width: 100px;
+        position: absolute;
+        left: 0;
+      }
+      .c {
+        width: 400px;
+      }
+      .r {
+        width: 200px;
+        position: absolute;
+        right: 0;
+      }
+      .l,
+      .c,
+      .r {
+        height: 50px;
+        background: #000;
+      }
+      .line {
+        width: 1px;
+        height: 100vh;
+        background: red;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d1">
+      <div class="l"></div>
+      <div class="c"></div>
+      <div class="r"></div>
+    </div>
+    <div class="line"></div>
+  </body>
+</html>

@@ -2,7 +2,7 @@
  * @Author        : ryuusennka
  * @Date          : 2022-01-18 16:03:20
  * @LastEditors   : ryuusennka
- * @LastEditTime  : 2022-01-18 18:10:10
+ * @LastEditTime  : 2022-01-28 18:23:33
  * @FilePath      : /my-fe-project/generateIndex.js
  * @Description   :
  */
@@ -12,8 +12,9 @@ const path = require('path');
 // const rootPath = path.join(__dirname);
 
 const config = {
-  'Multiple Themes': '主题切换',
-  'css position sticky': 'css position sticky 粘性位置',
+  '[demo]Multiple Themes': '主题切换',
+  '[demo]css position sticky': 'css position sticky 粘性位置',
+  '[demo]download table to csv': '下载表单数据为 csv 文件',
 };
 const generateIndex = config => {
   const paths = [];

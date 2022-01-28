@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Export HTML Table to CSV file in javascript</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      color: #2b2b2b;
+      font-family: 'Roboto Condensed';
+    }
+    th {
+      text-align: center;
+      color: #4657bd;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: #daeaff;
+    }
+    button {
+      margin-top: 1rem;
+    }
+  </style>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jimmy Konopelski</td>
+          <td>29</td>
+          <td>New Zealand</td>
+        </tr>
+        <tr>
+          <td>Darren Schumm Jr.</td>
+          <td>29</td>
+          <td>New Zealand</td>
+        </tr>
+        <tr>
+          <td>Brittany Spinka</td>
+          <td>31</td>
+          <td>New Zealand</td>
+        </tr>
+        <tr>
+          <td>Vernon Schiller</td>
+          <td>29</td>
+          <td>New Zealand</td>
+        </tr>
+      </tbody>
+    </table>
+    <button>下载</button>
+    <script>
+      // 下载 csv 原理
+      function demo() {
+        const csv = 'a,b,c\na1,b1,c1\n';
+        csvFile = new Blob([csv], { type: 'text/csv' });
+        downloadLink = document.createElement('a');
+        downloadLink.download = '1.csv';
+        downloadLink.href = window.URL.createObjectURL(csvFile);
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+
+      function nodelistToArray(nodelist) {
+        return Array.prototype.slice.call(nodelist);
+      }
+
+      function export_table_to_csv(filename) {
+        let csv = '';
+        const colHeads = nodelistToArray(document.querySelectorAll('table thead th'));
+        const bodyRows = nodelistToArray(document.querySelectorAll('table tbody tr')); // 查找 tbody 中所有的 tr
+        // 获取 头部
+        const titles = colHeads.map(items => {
+          return items.innerText;
+        });
+        csv += titles.join(',') + '\n'; // 第一行
+        const rows = [];
+        bodyRows.map(item => {
+          rows.push(
+            nodelistToArray(item.querySelectorAll('td')).map(td => {
+              return td.innerText;
+            })
+          );
+        });
+        rows.forEach(row => {
+          csv += row.join(',') + '\n';
+        });
+        csvFile = new Blob([csv], { type: 'text/csv' });
+        downloadLink = document.createElement('a');
+        downloadLink.download = filename;
+        downloadLink.href = window.URL.createObjectURL(csvFile);
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+
+      document.querySelector('button').addEventListener('click', () => {
+        export_table_to_csv('table.csv');
+      });
+    </script>
+  </body>
+</html>
