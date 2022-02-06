@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+    <style>
+      #dplayer {
+        width: calc(160 * 4px);
+        height: calc(90 * 4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dplayer"></div>
+    <button type="button" id="btn">下一个视频</button>
+    <script src="../node_modules/dplayer/dist/DPlayer.min.js"></script>
+    <script>
+      const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        autoplay: true, // 大多数移动端浏览器禁止了视频自动播放
+        video: {
+          url: 'https://sennka-oss.oss-cn-chengdu.aliyuncs.com/test-video/17.%E5%80%92%E7%AB%8B%E8%B5%B0.mp4',
+        },
+        highlight: [
+          {
+            time: 20,
+            text: '这是第 20 秒',
+          },
+          {
+            time: 120,
+            text: '这是 2 分钟',
+          },
+        ],
+      });
+      document.querySelector('#btn').addEventListener('click', () => {
+        dp.switchVideo({
+          url: 'https://sennka-oss.oss-cn-chengdu.aliyuncs.com/test-video/4.%E8%82%A9%E9%83%A8%E6%8E%A8%E4%B8%BE.mp4',
+          // pic: 'second.png',
+          // thumbnails: 'second.jpg',
+        });
+      });
+    </script>
+  </body>
+</html>

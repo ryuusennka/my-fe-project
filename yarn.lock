@@ -36,6 +36,18 @@ async@^2.6.2:
   dependencies:
     lodash "^4.17.14"
 
+axios@0.19.2:
+  version "0.19.2"
+  resolved "https://registry.npmmirror.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+  dependencies:
+    follow-redirects "1.5.10"
+
+balloon-css@^1.0.3:
+  version "1.2.0"
+  resolved "https://registry.npmmirror.com/balloon-css/-/balloon-css-1.2.0.tgz#53d3fb4051264a278a58713bed6865845dbcaf4b"
+  integrity sha512-urXwkHgwp6GsXVF+it01485Z2Cj4pnW02ICnM0TemOlkKmCNnDLmyy+ZZiRXBpwldUXO+aRNr7Hdia4CBvXJ5A==
+
 basic-auth@^2.0.1:
   version "2.0.1"
   resolved "https://registry.nlark.com/basic-auth/download/basic-auth-2.0.1.tgz#b998279bf47ce38344b4f3cf916d4679bbf51e3a"
@@ -115,6 +127,13 @@ corser@^2.0.1:
   resolved "https://registry.nlark.com/corser/download/corser-2.0.1.tgz#8eda252ecaab5840dcd975ceb90d9370c819ff87"
   integrity sha1-jtolLsqrWEDc2XXOuQ2TcMgZ/4c=
 
+debug@=3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmmirror.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+  dependencies:
+    ms "2.0.0"
+
 debug@^3.1.1:
   version "3.2.7"
   resolved "https://registry.npmmirror.com/debug/download/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
@@ -152,6 +171,15 @@ detect-touch-events@^2.0.2:
   resolved "https://registry.nlark.com/detect-touch-events/download/detect-touch-events-2.0.2.tgz#541cc49b05ca544726a3bf2802c5b23e53aeeebb"
   integrity sha1-VBzEmwXKVEcmo78oAsWyPlOu7rs=
 
+dplayer@^1.26.0:
+  version "1.26.0"
+  resolved "https://registry.npmmirror.com/dplayer/-/dplayer-1.26.0.tgz#d366200b1962bd09e91226066f2aadea6f35c71b"
+  integrity sha512-uOE0w/WdlX7N9d0ppIEcAYrcnUjY52TMX+MBL4lj9Mj+JMljVuaEc5w88HkZp5Q11VqvN/jxnM8ktx2Dr7/MgA==
+  dependencies:
+    axios "0.19.2"
+    balloon-css "^1.0.3"
+    promise-polyfill "8.1.3"
+
 eventemitter3@^4.0.0:
   version "4.0.7"
   resolved "https://registry.npmmirror.com/eventemitter3/download/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
@@ -163,6 +191,13 @@ fill-range@^7.0.1:
   integrity sha1-GRmmp8df44ssfHflGYU12prN2kA=
   dependencies:
     to-regex-range "^5.0.1"
+
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.npmmirror.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
+  dependencies:
+    debug "=3.1.0"
 
 follow-redirects@^1.0.0:
   version "1.14.7"
@@ -361,6 +396,11 @@ mkdirp@^0.5.5:
   dependencies:
     minimist "^1.2.5"
 
+ms@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
+  integrity sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==
+
 ms@^2.1.1:
   version "2.1.3"
   resolved "https://registry.npmmirror.com/ms/download/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
@@ -411,6 +451,11 @@ portfinder@^1.0.28:
     async "^2.6.2"
     debug "^3.1.1"
     mkdirp "^0.5.5"
+
+promise-polyfill@8.1.3:
+  version "8.1.3"
+  resolved "https://registry.npmmirror.com/promise-polyfill/-/promise-polyfill-8.1.3.tgz#8c99b3cf53f3a91c68226ffde7bde81d7f904116"
+  integrity sha512-MG5r82wBzh7pSKDRa9y+vllNHz3e3d4CNj1PQE4BQYxLme0gKYYBm9YENq+UkEikyZ0XbiGWxYlVw3Rl9O/U8g==
 
 prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.8.1"
