@@ -2,8 +2,8 @@
  * @Author        : ryuusennka
  * @Date          : 2022-01-18 16:03:20
  * @LastEditors   : ryuusennka
- * @LastEditTime  : 2022-01-28 18:23:33
- * @FilePath      : /my-fe-project/generateIndex.js
+ * @LastEditTime  : 2022-02-06 17:08:09
+ * @FilePath      : \my-fe-project\generateIndex.js
  * @Description   :
  */
 
@@ -15,6 +15,7 @@ const config = {
   '[demo]Multiple Themes': '主题切换',
   '[demo]css position sticky': 'css position sticky 粘性位置',
   '[demo]download table to csv': '下载表单数据为 csv 文件',
+  '[demo]DplayerJs': '视频播放器',
 };
 const generateIndex = config => {
   const paths = [];
