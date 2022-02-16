@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+    <style>
+      /* Ratio demo here */
+      /* known issues: image won't scale if you use browser zoom*/
+
+      .ratio {
+        width: 100vw;
+        height: calc(100vw / 16 * 9);
+      }
+
+      .ratio:nth-child(1) {
+        background: url('https://s3.amazonaws.com/f.cl.ly/items/1i3m41083P2S041m0a0v/sand.jpg') no-repeat;
+        background-size: cover;
+      }
+
+      .ratio:nth-child(2) {
+        background: url('https://s3.amazonaws.com/f.cl.ly/items/0w3A3g1d252a1f2M462Q/flower.jpg') no-repeat;
+        background-size: cover;
+      }
+
+      .ratio:nth-child(3) {
+        background: url('https://s3.amazonaws.com/f.cl.ly/items/0s1G3a0X3R1I2Y2A2C0U/hand.jpg') no-repeat;
+        background-size: cover;
+      }
+
+      .ratio:nth-child(4) {
+        background: url('https://s3.amazonaws.com/f.cl.ly/items/3q3b0e442q0K0r441G0q/hour.jpg') no-repeat;
+        background-size: cover;
+      }
+
+      /*other stuff */
+
+      html {
+        width: 100vw;
+        overflow-x: hidden;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+      }
+
+      .ratio {
+        text-align: center;
+        color: #fff;
+        display: flex;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .content {
+        position: relative;
+        padding: 6vw;
+        width: 50%;
+        margin: auto;
+        box-sizing: border-box;
+        z-index: 1;
+      }
+
+      @media (min-width: 550px) {
+        .content {
+          font-size: 1.2em;
+        }
+      }
+
+      @media (min-width: 780px) {
+        .content {
+          font-size: 1.5em;
+        }
+      }
+
+      .content:before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ratio">
+      <div class="content">To see a World in a Grain of Sand</div>
+    </div>
+
+    <div class="ratio">
+      <div class="content">And a Heaven in a Wild Flower,</div>
+    </div>
+
+    <div class="ratio">
+      <div class="content">Hold Infinity in the palm of your hand</div>
+    </div>
+
+    <div class="ratio">
+      <div class="content">And Eternity in an hour.</div>
+    </div>
+  </body>
+</html>

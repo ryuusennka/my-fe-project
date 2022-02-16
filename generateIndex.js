@@ -2,7 +2,7 @@
  * @Author        : ryuusennka
  * @Date          : 2022-01-18 16:03:20
  * @LastEditors   : ryuusennka
- * @LastEditTime  : 2022-02-06 17:08:09
+ * @LastEditTime  : 2022-02-16 16:16:27
  * @FilePath      : \my-fe-project\generateIndex.js
  * @Description   :
  */
@@ -16,6 +16,7 @@ const config = {
   '[demo]css position sticky': 'css position sticky 粘性位置',
   '[demo]download table to csv': '下载表单数据为 csv 文件',
   '[demo]DplayerJs': '视频播放器',
+  '[demo]16x9': '16x9的屏幕',
 };
 const generateIndex = config => {
   const paths = [];
