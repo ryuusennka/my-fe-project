@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image Convert to data url</title>
+  </head>
+  <body>
+    <input type="file" id="selectImageInput" />
+    <script>
+      const selectImageInput = document.querySelector('#selectImageInput');
+      selectImageInput.addEventListener('change', e => {
+        const file = e.target.files[0];
+        const fr = new FileReader();
+        fr.onloadend = () => {
+          console.log(`result:`, fr.result);
+        };
+        fr.readAsDataURL(file);
+        debugger;
+      });
+
+      window.addEventListener('paste', e => {
+        /**
+         * event.clipboardData 是一个 DataTransfer
+         */
+        const clipboardData = e.clipboardData;
+        if (!(clipboardData && clipboardData.items)) {
+          //是否有粘贴内容
+          return;
+        }
+
+        for (let i = 0; i < clipboardData.items.length; i++) {
+          const item = clipboardData.items[i];
+          if (item.type.indexOf('image') === -1) return; // 判断是否是图片
+          // 得到图片的base64
+          const file = item.getAsFile();
+          const fr = new FileReader();
+          fr.onloadend = () => {
+            const result = fr.result;
+            console.log(result);
+          };
+          fr.readAsDataURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>
